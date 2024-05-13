@@ -1,6 +1,6 @@
 package com.techtask.faceittesttask.annotation;
 
-import com.techtask.miratechtesttask.validation.TaskStatusValidator;
+import com.techtask.faceittesttask.validation.CuisineTypeValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 import jakarta.validation.constraints.NotNull;
@@ -16,8 +16,8 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 @Documented
 @NotNull(message = "Value cannot be null")
-@Constraint(validatedBy = TaskStatusValidator.class)
-public @interface TaskStatusValidation {
+@Constraint(validatedBy = CuisineTypeValidator.class)
+public @interface CuisineTypeValidation {
     Class<? extends Enum<?>> enumClazz();
     String message() default "Value is not valid";
     Class<?>[] groups() default {};

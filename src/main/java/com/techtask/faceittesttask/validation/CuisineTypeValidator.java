@@ -1,13 +1,13 @@
-package com.techtask.miratechtesttask.validation;
+package com.techtask.faceittesttask.validation;
 
-import com.techtask.miratechtesttask.annotation.TaskStatusValidation;
+import com.techtask.faceittesttask.annotation.CuisineTypeValidation;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TaskStatusValidator implements ConstraintValidator<TaskStatusValidation, String> {
+public class CuisineTypeValidator implements ConstraintValidator<CuisineTypeValidation, String> {
 
     List<String> valueList = null;
 
@@ -17,7 +17,7 @@ public class TaskStatusValidator implements ConstraintValidator<TaskStatusValida
     }
 
     @Override
-    public void initialize(TaskStatusValidation constraintAnnotation) {
+    public void initialize(CuisineTypeValidation constraintAnnotation) {
         valueList = new ArrayList<>();
         Class<? extends Enum<?>> enumClass = constraintAnnotation.enumClazz();
 

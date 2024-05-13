@@ -1,8 +1,8 @@
 package com.techtask.faceittesttask.exception;
 
-public class CuisineNotFoundException extends RuntimeException {
+public class NotFoundException extends RuntimeException {
 
-    public CuisineNotFoundException(String message) {
+    public NotFoundException(String message) {
         super(message);
     }
 

@@ -1,14 +1,25 @@
-package com.techtask.faceittesttask.model.entity;
+package com.techtask.faceittesttask.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Entity
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public abstract class MenuItem {
-    @Id
-    private Long id;
+
+    @Column
+    @NotNull
     private String name;
+
+    @Column
+    @NotNull
+    @Min(0)
     private Double price;
 }

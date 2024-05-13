@@ -1,8 +1,8 @@
 package com.techtask.faceittesttask.exception;
 
-public class CuisineExistsException extends RuntimeException {
+public class ExistsException extends RuntimeException {
 
-    public CuisineExistsException(String message) {
+    public ExistsException(String message) {
         super(message);
     }
 
